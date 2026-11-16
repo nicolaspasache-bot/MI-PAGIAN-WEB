@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<!--
+  Nombre del alumno: ______________________
+  Curso: Diseño de Interfaces de Programación (C34331)
+  Laboratorio: Fundamentos de JavaScript (parte III)
+  Este proyecto junta 3 laboratorios en una sola página:
+    1) Inventario dinámico de productos
+    2) Editor de perfiles
+    3) Galería interactiva
+-->
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Laboratorio JavaScript - Parte III</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <!-- ENCABEZADO Y MENÚ -->
+  <header class="encabezado">
+    <h1>Laboratorio JavaScript (parte III)</h1>
+    <nav>
+      <a href="#lab1">1. Inventario</a>
+      <a href="#lab2">2. Perfiles</a>
+      <a href="#lab3">3. Galería</a>
+    </nav>
+  </header>
+
+  <main>
+
+    <!-- ============================================ -->
+    <!-- LABORATORIO 1: INVENTARIO DINÁMICO           -->
+    <!-- Temas: arrays, filter, reduce, map, funciones -->
+    <!-- ============================================ -->
+    <section id="lab1" class="seccion">
+      <h2>Laboratorio 1: Inventario dinámico de productos</h2>
+      <p class="ayuda">
+        Filtramos los productos con stock mayor a 0 y precio menor a 500,
+        y calculamos el total de esos productos (precio × stock).
+      </p>
+
+      <!-- Aquí JavaScript dibuja la lista de productos -->
+      <ul id="lista-productos" class="lista"></ul>
+
+      <p class="total">Total acumulado: <strong id="total-inventario">S/ 0</strong></p>
+
+      <!-- Aumentar stock escribiendo el nombre del producto -->
+      <div class="fila">
+        <input type="text" id="nombre-producto" placeholder="Nombre del producto (ej: Mouse)">
+        <button id="btn-aumentar">Aumentar stock +10</button>
+      </div>
+      <p id="mensaje-inventario" class="mensaje"></p>
+    </section>
+
+    <!-- ============================================ -->
+    <!-- LABORATORIO 2: EDITOR DE PERFILES            -->
+    <!-- Temas: DOM, classList, getAttribute, setAttribute -->
+    <!-- ============================================ -->
+    <section id="lab2" class="seccion">
+      <h2>Laboratorio 2: Editor de perfiles</h2>
+
+      <div class="formulario">
+        <label for="nombre">Nombre</label>
+        <input type="text" id="nombre" placeholder="Tu nombre">
+
+        <label for="correo">Correo</label>
+        <input type="text" id="correo" placeholder="tucorreo@ejemplo.com">
+
+        <label for="edad">Edad</label>
+        <input type="number" id="edad" placeholder="Tu edad">
+
+        <!-- data-estado guarda el estado visual del botón -->
+        <button id="btn-guardar" data-estado="normal">Guardar</button>
+      </div>
+
+      <!-- Mensaje de error (se pone rojo con la clase "error") -->
+      <p id="mensaje-perfil" class="mensaje"></p>
+
+      <!-- Aquí aparecen las tarjetas de perfiles -->
+      <div id="contenedor-perfiles" class="tarjetas"></div>
+    </section>
+
+    <!-- ============================================ -->
+    <!-- LABORATORIO 3: GALERÍA INTERACTIVA           -->
+    <!-- Temas: arrays + DOM, sort, filter, forEach   -->
+    <!-- ============================================ -->
+    <section id="lab3" class="seccion">
+      <h2>Laboratorio 3: Galería interactiva</h2>
+
+      <div class="fila">
+        <button id="btn-ordenar">Ordenar por título (A-Z)</button>
+        <button id="btn-filtrar">Descripciones de más de 50 caracteres</button>
+        <button id="btn-todas" class="secundario">Mostrar todas</button>
+      </div>
+
+      <!-- Aquí JavaScript dibuja las tarjetas de la galería -->
+      <div id="galeria" class="tarjetas"></div>
+    </section>
+
+  </main>
+
+  <footer class="pie">
+    <p>Tecsup - Diseño y Desarrollo de Software</p>
+  </footer>
+
+  <script src="app.js"></script>
+</body>
+</html>

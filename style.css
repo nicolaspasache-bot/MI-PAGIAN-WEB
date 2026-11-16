@@ -1,0 +1,212 @@
+ /* ============================================
+     Nombre del alumno: ______________________
+     Estilos del proyecto (parte III)
+     ============================================ */
+
+  /* ---------- Colores del proyecto (variables) ---------- */
+  :root {
+    --azul: #0a6ea8;
+    --azul-claro: #e6f3fb;
+    --texto: #1d2733;
+    --gris: #6b7785;
+    --borde: #d5dde5;
+    --rojo: #c62828;
+    --verde: #2e7d32;
+  }
+
+  /* ---------- Estilos generales ---------- */
+  * {
+    box-sizing: border-box;
+  }
+
+  body {
+    margin: 0;
+    font-family: Arial, Helvetica, sans-serif;
+    color: var(--texto);
+    background: #f5f8fa;
+    line-height: 1.5;
+  }
+
+  /* ---------- Encabezado y menú ---------- */
+  .encabezado {
+    background: var(--azul);
+    color: white;
+    padding: 20px;
+    text-align: center;
+  }
+
+  .encabezado h1 {
+    margin: 0 0 10px 0;
+    font-size: 1.6rem;
+  }
+
+  .encabezado nav a {
+    color: white;
+    margin: 0 10px;
+    text-decoration: none;
+    font-weight: bold;
+  }
+
+  .encabezado nav a:hover {
+    text-decoration: underline;
+  }
+
+  /* ---------- Secciones (una por laboratorio) ---------- */
+  main {
+    max-width: 900px;
+    margin: 0 auto;
+    padding: 20px;
+  }
+
+  .seccion {
+    background: white;
+    border: 1px solid var(--borde);
+    border-radius: 8px;
+    padding: 20px;
+    margin-bottom: 24px;
+  }
+
+  .seccion h2 {
+    margin-top: 0;
+    color: var(--azul);
+  }
+
+  .ayuda {
+    color: var(--gris);
+    font-size: 0.95rem;
+  }
+
+  /* ---------- Botones e inputs ---------- */
+  button {
+    background: var(--azul);
+    color: white;
+    border: none;
+    border-radius: 6px;
+    padding: 10px 16px;
+    font-size: 1rem;
+    cursor: pointer;
+  }
+
+  button:hover {
+    background: #085584;
+  }
+
+  button.secundario {
+    background: var(--gris);
+  }
+
+  input {
+    padding: 10px;
+    border: 1px solid var(--borde);
+    border-radius: 6px;
+    font-size: 1rem;
+  }
+
+  /* Una fila con elementos uno al lado del otro */
+  .fila {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    margin: 12px 0;
+  }
+
+  /* ---------- Laboratorio 1: inventario ---------- */
+  .lista {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+  }
+
+  .lista li {
+    display: flex;
+    justify-content: space-between;
+    padding: 8px 10px;
+    border-bottom: 1px solid var(--borde);
+  }
+
+  .total {
+    font-size: 1.1rem;
+  }
+
+  /* ---------- Laboratorio 2: formulario ---------- */
+  .formulario {
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+    max-width: 400px;
+  }
+
+  .formulario label {
+    font-weight: bold;
+    margin-top: 6px;
+  }
+
+  /* Estado visual del botón: se activa con setAttribute */
+  #btn-guardar[data-estado="guardado"] {
+    background: var(--verde);
+  }
+
+  /* ---------- Mensajes (error y éxito) ---------- */
+  .mensaje {
+    min-height: 24px;
+    font-weight: bold;
+  }
+
+  /* Esta clase la agrega JavaScript con classList.add("error") */
+  .mensaje.error {
+    color: var(--rojo);
+  }
+
+  /* Esta clase la agrega JavaScript con classList.add("exito") */
+  .mensaje.exito {
+    color: var(--verde);
+  }
+
+  /* ---------- Tarjetas (perfiles y galería) ---------- */
+  .tarjetas {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+    gap: 16px;
+    margin-top: 16px;
+  }
+
+  .tarjeta {
+    background: var(--azul-claro);
+    border: 1px solid var(--borde);
+    border-radius: 8px;
+    padding: 14px;
+  }
+
+  .tarjeta h3 {
+    margin: 0 0 6px 0;
+    font-size: 1.1rem;
+  }
+
+  .tarjeta p {
+    margin: 4px 0;
+    font-size: 0.95rem;
+  }
+
+  .tarjeta img {
+    width: 100%;
+    height: 140px;
+    object-fit: cover;
+    border-radius: 6px;
+    margin-bottom: 8px;
+  }
+
+  .tarjeta button {
+    margin-top: 8px;
+    background: var(--rojo);
+    padding: 6px 12px;
+    font-size: 0.9rem;
+  }
+
+  /* ---------- Pie de página ---------- */
+  .pie {
+    text-align: center;
+    color: var(--gris);
+    padding: 20px;
+  }
+
+
